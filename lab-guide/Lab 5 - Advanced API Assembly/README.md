@@ -36,41 +36,33 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 
 1. Click on the `+ Add` button and select `API`.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_add_new.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_add_new.png)
 
-1. Fill in the form values for the API, then click the `Next` button to continue.
+1. Fill in the form values for the API, then click the `Add` button to continue.
 
 	> Title: `financing`
 	
 	> Name: `financing`
 	
-	> Base Path: `/financing`
-	
 	> Version: `1.0.0`
 	
-	> Description: `Operations for calculating financing payments`
+	> Add to an existing product: `inventory 1.0.0`
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_api_info.png)
-
-1. Keep the selected default to `Don't add to a product` and click the `Add` button.
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_api_info.png)
 
 1. API Connect will generate a new swagger definition file for the `financing` API and automatically load the API editor screen. Notice that the API does not contain any paths or data definitions. We will be adding these in the following steps.
 
-1. Click on `Host` from the API editor menu. Remove `$(catalog.host)` from the Host field. We will keep this blank.
+1. Click on `Base Path` menu option and set the base path to `/financing`.
 
-	> ![][troubleshooting]
-	> 
-	> The host field will show a red line indicating that the field is required. You may ignore this message.
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_api_basepath.png)
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_no_host.png)
+1. Click on the `Schemes` menu option, or select it from the API editor menu. Enable the `https` scheme.
 
-1. Scroll down to the `Schemes` section, or select it from the API editor menu. Enable the `https` scheme.
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_schemes.png)
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_schemes.png)
+1. Click on the the `Consumes` menu option. For both "Consumes" and "Produces", choose `application/json`.
 
-1. Below the Schemes section are the `Consumes` and `Produces` sections. For each of these, choose `application/json`.
-
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_consumes_produces.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_consumes_produces.png)
 
 1. Next, we need to create the model definition for our new API. These definitions are used in a few places. Their primary role is to serve as documentation in the developer portal on expected input and output parameters; however, they can also be used for data mapping actions. Click on `Definitions` from the API Designer menu.
 
@@ -88,7 +80,7 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 
 	> Example: `199.99`
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_definition_complete.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_definition_complete.png)
 
 1. Now that we have a definition, we'll create a path. Click on `Paths` from the API Designer menu.
 
@@ -100,17 +92,13 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 
 1. Click on the `GET` operation to expand the configuration options for the resource.
 
-1. Each operation needs an Operation ID. Set the Operation ID to: `get.financingAmount`
-
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_operation_id.png)
-
 1. Next, we have the option of adding request parameters to the operation. This defines the input to the API request. Since this is a GET request, we'll add the required request parameters to the query component of the URI.
 
 	Click on the `Add Parameter` link to create a new query parameter. Then, select `Add new parameter` from the sub-menu.
 
 1. We're actually going to need three total parameters for this operation, so go ahead and click on the `Add Parameter` link two more times to add the parameter templates.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_parameter_template.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_parameter_template.png)
 
 1. Edit the parameters to set the values:
 
@@ -148,15 +136,15 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 	  
 	> Type: `float`
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_parameter_complete.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_parameter_complete.png)
 
 1. Next we'll set the schema for the response. Since we already defined the `paymentAmount` definition, we will select it from the drop down list. You will find the `paymentAmount` definition at the top of the list.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_resp_schema.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_resp_schema.png)
 
 1. Save the API definition.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/save-icon.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/save-icon.png)
 
 1. You have completed the creation of the new API definition. The path and model data will be presented to our consumers on the developer portal once it's published.
 
@@ -164,21 +152,21 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 
 1. Click on the `Assemble` tab to access the assembly editor.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_assemble_tab.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_assemble_tab.png)
 
 1. Select the `DataPower Gateway policies` filter.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_gateway_policies.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_gateway_policies.png)
 
 1. In the policy list, click and drag the `activity-log` policy to the front of the processing pipeline.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_assembly_pipeline_1.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_assembly_pipeline_1.png)
 
 1. Click on the `activity-log` action resting on the pipeline to open the configuration options for the policy.
 
 1. Change the selected item for the Content field from `activity` to `payload`.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_activity_log.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_activity_log.png)
 
 1. Click the `X` to close the policy editor window to return to the assembly processing pipeline.
 
@@ -188,17 +176,17 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 
 1. After the `invoke` policy, add a `gatewayscript` policy and then a `xml-to-json` policy.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_assembly_pipeline_2_temp.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_assembly_pipeline_2_temp.png)
 
 1. In order to consume a SOAP-based service from our REST-based API, we need to map the query parameter inputs that we defined as part of the `GET /calculate` operation to a SOAP payload. To do so, click on the `map` policy on our pipeline to open the map editor.
 
 1. Click on the `+` icon to make the editor window fill the screen.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_map_fullscreen.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_map_fullscreen.png)
 
 1. On the **Input** column, click on the `pencil` icon to bring up the input editor.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/input-pencil-icon.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/input-pencil-icon.png)
 
 1. Recall that our GET operation has three required query parameters: `amount`, `duration` and `rate`. Click on the `+ input` button three times to add the entries to the input table.
 
@@ -232,7 +220,7 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 	    
 	> Definition: `float`
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_map_inputs.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_map_inputs.png)
 
 1. Click on the `Done` button to return to the map editor.
 
@@ -246,11 +234,13 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 
 1. In the interest of time, and to avoid typing errors, a sample schema file has been provided for you.
 
-	Open the `Sublime Text` application from the system task bar, or using the favorites menu.
+	Select the `Atom` application from the system task bar if it was left open, or open it using the favorites menu.
+
+1. Make sure you're in the `Atom` instance that is opened to browse the `lab-files` folder. If you need to open the `lab-files` folder, use the file menu and select `File -> Open Folder...` and choose `student -> lab-files`.
 	
 1. Use the file tree menu to open the `lab5/schema_financingSoap.yaml` file:
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/open-schema-financing-soap.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/open-schema-financing-soap.png)
 
 1. Copy the contents of the `schema_financingSoap.yaml` file to the system clipboard.
 
@@ -308,31 +298,27 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 
 1. Switch back to the `Firefox` browser and paste (`control+v`) the SOAP schema definition into the schema editor window, then click the `Done` button.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_soap_schema.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_soap_schema.png)
 
 1. Click the `Done` button in the output editor window to return to the map editor.
-
-1. Click on the curly braces `{}` for the `financingRequest: {}` element to expand the view and see the SOAP input elements.
-
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_expand_operations.png)
 
 1. For each of the `Input` query parameters, map them to their respective SOAP `Output` elements.
 
 	To map from an input field to an output field, click the circle next to the *source* element once, then click the circle next to the *target* element. A line will be drawn between the two, indicating a mapping from the source to the target.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_map_to_soap.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_map_to_soap.png)
 
 1. Click the `X` button in the map editor to return to the policy pipeline.
 
 1. Click the `invoke` policy to open its editor.
 
-1. Set the `Invoke URL` to: `https://services.think.ibm:1443/financing`.
+1. Set the `URL` to: `https://services.think.ibm:1443/financing/calculate`.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_invoke_url.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_invoke_url.png)
 
 1. Scroll down and set the `HTTP Method` to `POST`.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/fin_invoke_method.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/fin_invoke_method.png)
 
 1. Click the `X` button to return to the policy pipeline.
 
@@ -342,7 +328,7 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 	session.name('_apimgmt').setVar('content-type', 'application/xml');
 	```
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/gws-workaround.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/gws-workaround.png)
 
 1. You are now finished with the assembly for the `financing` API. The assembly takes the following actions:
 
@@ -354,7 +340,7 @@ In this tutorial, you will expand the product offerings for **ThinkIBM**. In add
 
 1. Save the API definition.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/save-icon.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/save-icon.png)
 
 ## 5.2 - Add Logistics API (Advanced Assembly)
 
@@ -366,41 +352,21 @@ Rather than require you to build the entire API from scratch again, you will see
 
 1. Click on the `All APIs` link to return to the main API Designer screen.
 
-1. Click on the `+ Add` button to add a new API. Specify the following values:
+1. Click on the `+ Add` button to import a new `OpenAPI (Swagger 2.0)`.
 
-	> Title: `logistics`
-	  
-	> Name: `logistics`
-	  
-	> Base Path: `/logistics`
-	  
-	> Version: `1.0.0`
-	  
-	> Description: `Provides logistics for sales`
-	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-create.png)
-	
-1. Keep the default `Don't add to a product` option selected and click the `Add` button.
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/import-logistics-api.png)
 
-1. Switch to the `Source` tab and look at the API Definition. Any edits you make directly to the source will be immediately visible on the `Design` tab.  
+1. Click on the `Select File` button to open the file browser. Navigate to the `~/home/student/lab-files/lab5` folder and choose the `api_logistics.yaml` file.
 
-1. From the `Sublime Text` editor, open the `lab5/api_logistics.yaml` file.
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/open-swager-file.png)
 
-	**Select** the full contents of the file and **copy** the contents to the clipboard.
+1. Click the `import` button to import the `logistics` API definition template.
 
-1. Return to the browser, select the contents of the `Source` tab and delete the contents.
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/import-logistics-api-2.png)
 
-1. Paste the contents of your clipboard to update the API Definition.
-  
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-yaml.png)
+1. Click on the `logistics 1.0.0` API from the list to browse the API definition.
 
-1. Switch back to the `Design` view and note the changes that have been imported, in particular:
-
-	* Properties
-	* Paths
-	* Definitions
-
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-updated-definition.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/open-logistics-api.png)
 
 ### 5.2.2 - Create the Logistics API Assembly
 
@@ -416,49 +382,51 @@ Rather than require you to build the entire API from scratch again, you will see
 
 1. Click `search operations...` to bring up the drop-down list of available operations.
 
-1. Select the `shipping.calc` operation.
+1. Select the `get /shipping` operation.
 
-1. Click the `+ Case` button to add a second case for the `get.stores` operation.  
-
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-operationswitch-cases.png)
+1. Click the `+ Case` button to add a second case for the `get /stores` operation.
 
 1. Click the `X` to close the operation switch configuration editor.
 
 	You should see two new processing pipelines created on your `operation-switch` step - one for each case:  
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-twopipelines.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics-twopipelines.png)
 
-#### 5.2.2.1 - Configure the `shipping.calc` Case:
+#### 5.2.2.1 - Configure the `get /shipping` Case:
 
 This operation will end up invoking two separate back-end services to acquire shipping rates for the respective companies, then utilize a map action to combine the two separate responses back into a single, consolidated message for our consumers.
 
-1. Add an invoke policy to the `shipping.calc` case with the following properties:
+1. Add an invoke policy to the `get /shipping` case with the following properties:
 
 	> Title: `invoke_xyz`
 	  
-	> Invoke URL: `$(shipping_svc_url)?company=xyz&from_zip=90210&to_zip={zip}`
+	> URL: `$(shipping_svc_url)?company=xyz&from_zip=90210&to_zip={zip}`
 	  
 	> Response object variable (scroll to the bottom): `xyz_response`
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics_invokexyz1.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics_invokexyz1.png)
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics_invokexyz2.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics_invokexyz2.png)
 	
 	> ![][info]
 	>
 	> The `{zip}` parameter provided here is a reference to the `zip` parameter defined as input to the operation. The `{zip}` portion of the URL will get replaced by the actual zip code provided by then API consumers.
 
-1. Add a second invoke policy to the `shipping.calc` case with the following properties:
+1. Hover over the `invoke_xyz` policy and click on the `clone` button to add another invoke action:
+
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/clone-invoke-action.png)
+
+1. Edit the new invoke policy with the following properties:
 
 	> Title: `invoke_cek`
 	  
-	> Invoke URL: `$(shipping_svc_url)?company=cek&from_zip=90210&to_zip={zip}`
+	> URL: `$(shipping_svc_url)?company=cek&from_zip=90210&to_zip={zip}`
 	
 	> Response object variable: `cek_response`
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics_invokecek1.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics_invokecek1.png)
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics_invokecek2.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics_invokecek2.png)
 
 1. Add a `map` policy after the last invoke, then click it to open the editor.
 
@@ -468,7 +436,7 @@ This operation will end up invoking two separate back-end services to acquire sh
 	  
 	> Description: `Map responses from invoke_xyz and invoke_cek to output`
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-map-properties.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics-map-properties.png)
 
 1. Click the `+ input` button to add an input. Specify the following input configuration:
   
@@ -482,13 +450,13 @@ This operation will end up invoking two separate back-end services to acquire sh
 
 1. After you select `Inline schema`, you will be prompted to "Provide a schema".
 
-	Use the `Sublime Text` editor to open the `lab5/schema_shippingSvc.yaml` file.
+	Use the `Atom` editor to open the `/home/student/lab-files/lab5/schema_shippingSvc.yaml` file.
 	
 	Copy the contents to your clipboard and paste them into the schema editor window.
 	  
 1. Click `Done` to close the Schema window  
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-map-xyz-schema.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics-map-xyz-schema.png)
 
 1. Click the `+input` button again to add another input. Specify the following input configuration:
   
@@ -504,7 +472,7 @@ This operation will end up invoking two separate back-end services to acquire sh
 
 1. You now have two inputs assigned to the `map` policy:
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-map-responses-inputs.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics-map-responses-inputs.png)
 
 1. Click the `Done` button to return to the editor.
 
@@ -518,47 +486,47 @@ This operation will end up invoking two separate back-end services to acquire sh
 	  
 	> Definition: `#/definitions/shipping`  
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-map-responses-output.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics-map-responses-output.png)
 
 1. Click the `Done` button to return to the editor.
 
 1. Complete the mapping. To map from an input field to an output field, click the circle next to the *source* element once, then click the circle next to the *target* element. A line will be drawn between the two, indicating a mapping from the source to the target.  
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-map-complete.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics-map-complete.png)
 
 1. Click the `X` to close the map editor.
 
 	Your assembly policy for the `shipping.calc` operation is now complete.
 	  
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-shipping-calc-policy.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics-shipping-calc-policy.png)
 
 1. Save your changes.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/save-icon.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/save-icon.png)
 
-#### 5.2.2.2 - Configure the `get.stores` Case:
+#### 5.2.2.2 - Configure the `get /stores` Case:
 
 This operation will call out to the Google Geocode API to obtain location information about the provided zip code, then utilize a simple gatewayscript to modify the response and provide a formatted Google Maps link.
 
-1. Add an invoke policy to the `get.stores` case with the following properties:
+1. Add an invoke policy to the `get /stores` case with the following properties:
 
 	> Title: `invoke_google_geolocate`
 	  
-	> Invoke URL: `https://maps.googleapis.com/maps/api/geocode/json?&address={zip}`
+	> URL: `https://maps.googleapis.com/maps/api/geocode/json?&address={zip}`
 	  
 	> Response object variable (scroll to the bottom): `google_geocode_response`  
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics_invokegeolocate1.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics_invokegeolocate1.png)
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics_invokegeolocate2.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics_invokegeolocate2.png)
 
 1. Add a `gatewayscript` policy with the following properties:  
   
 	> Title: `gws-format-maps-link`
 	  
-	> Paste the contents of `lab5/gws_formatMapsLink.js` into the code section of the policy.
+	> Paste the contents of `/home/student/lab-files/lab5/gws_formatMapsLink.js` into the code section of the policy.
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics-gws.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics-gws.png)
 	
 	> ![][info]
 	> 
@@ -568,11 +536,11 @@ This operation will call out to the Google Geocode API to obtain location inform
 
 1. Your assembly for the `logistics` API will now include two separate operation policies:
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/logistics_assembly-complete.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/logistics_assembly-complete.png)
 
 1. Save your changes.
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab5/save-icon.png)
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab5/save-icon.png)
 
 1. Close the Firefox browser by clicking the `x` on the tab or browser window.
 
@@ -595,7 +563,7 @@ Using both the CLI and the API Designer, a lot of files have been created and up
 1. From the `Terminal Emulator`, type:
 
 	```bash
-	validate_lab 5
+	validate-lab 5
 	```
 	
 1. The script will execute a series `diff` commands against specific files in your project folder (`~/ThinkIBM/inventory`)
@@ -603,7 +571,7 @@ Using both the CLI and the API Designer, a lot of files have been created and up
 1. If the output of the `validate_lab` script includes discrepencies, you may merge the corrected changes into your source files by typing:
 
 	```bash
-	merge_lab 5
+	merge-lab 5
 	```
 
 # Lab 5 - Conclusion
@@ -612,6 +580,6 @@ Using both the CLI and the API Designer, a lot of files have been created and up
 
 Proceed to [Lab 6 - Working with API Products](../Lab%206%20-%20Working%20with%20API%20Products)
 
-[important]: https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/common/important.png "Important!"
-[info]: https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/common/info.png "Information"
-[troubleshooting]: https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/common/troubleshooting.png "Troubleshooting"
+[important]: https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/common/important.png "Important!"
+[info]: https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/common/info.png "Information"
+[troubleshooting]: https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/common/troubleshooting.png "Troubleshooting"
