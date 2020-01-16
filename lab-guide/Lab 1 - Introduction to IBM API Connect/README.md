@@ -15,6 +15,10 @@
  |ユーザー名|apic.user*xxx*|*xxx*には受講生ごとに割り振られた数字に置き換えてください。|
  |パスワード|Passw0rd!| |
 
+  ![](lab-guide/img/lab1/apimanager-login-1.png)
+
+  ![](lab-guide/img/lab1/apimanager-login-2.png)
+
 	![](../img/lab1/apimanager-login-1.png)
 
 	![](../img/lab1/apimanager-login-2.png)
