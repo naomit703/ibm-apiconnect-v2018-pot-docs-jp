@@ -23,7 +23,9 @@
 
 	![](../img/lab1/apimanager-login-2.png)
 
-	![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/blob/master/lab-guide/img/lab1/apimanager-login-2.png)
+	![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/blob/master/lab-guide/img/lab1/apimanager-login-1.png)
+
+		![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/blob/master/lab-guide/img/lab1/apimanager-login-2.png)
 
 1.	From the terminal command line type:
 
