@@ -3,10 +3,13 @@
 
 ---
 
-# 1.1	- Creating a `notes` Application
+# 1.1	- APIの登録
 
 1.	API Managerにログインします。
+	![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/blob/master/lab-guide/img/lab1/apimanager-login-1.png)
+
 	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/lab1/run.png)
+
 
 We will use the API Connect Developer Toolkit command line interface to create the initial application and explore the created artifacts.
 
