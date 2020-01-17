@@ -24,10 +24,12 @@
 	|ユーザー名|apic.user*xxx*|
 	|パスワード|Passw0rd!|
 
+	![](/lab-guide/img/lab1/apimanager-login-1.png)
+
 
 	> ![][info]
 	>
-	> 今後、API Managerにログインする場合には、この手順でログインしてください。
+	> ユーザー名の*xxx*の部分には、受講生ごとに割り当てられた数字に置き換えてください。今後、API Managerにログインする場合には、この手順でログインしてください。
 
 
 1.	カタログのゲートウェイ設定を確認して設定します。API Managerのトップページで`カタログの管理`をクリックします。
@@ -52,9 +54,17 @@
 	![](/lab-guide/img/lab1/catalog-select-gw-service.png)
 
 
-> ![][info]
->
-> この作業は、新しいカタログを利用する場合に、最初に必要になります。Sandboxカタログはデフォルトのカタログです。カタログとは、APIのデプロイ先となるゲートウェイ上の環境の単位です。APIを公開する際に、公開先のカタログを指定します。APIを公開するとAPIのエンドポイントにカタログ名が含まれます。
+
+	> ![][info]
+	>
+	> API Connect v2018では2種類のゲートウェイ・タイプが利用できます。API Connect v5ベースのランタイム・アーキテクチャーの`DataPower Gateway (v5 互換)`と、新しい`DataPower API Gateway`です。新しい`DataPower API Gateway`では、API処理に特化しており、ランタイムのパフォーマンスが向上しています。それぞれのゲートウェイ・タイプで一部利用できないポリシーがあるため注意してください。詳細は以下のリンクで確認できます。
+	> + [マニュアル : API Connect のゲートウェイ・タイプ](https://www.ibm.com/support/knowledgecenter/ja/SSMNED_2018/com.ibm.apic.overview.doc/rapic_gateway_types.html) : https://www.ibm.com/support/knowledgecenter/ja/SSMNED_2018/com.ibm.apic.overview.doc/rapic_gateway_types.html
+	> + [APIGW Porting Notes](https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes) : https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes
+
+
+	> ![][info]
+	>
+	> この作業は、新しいカタログを利用する場合に、最初に必要になります。Sandboxカタログはデフォルトのカタログです。カタログとは、APIのデプロイ先となるゲートウェイ上の環境の単位です。APIを公開する際に、公開先のカタログを指定します。APIを公開するとAPIのエンドポイントにカタログ名が含まれます。
 
 	以上でAPIを作成する準備作業が終了しました。
 
@@ -84,9 +94,9 @@
 	![](/lab-guide/img/lab1/create-api-from-target-service-wizard1.png)
 
 
-> ![][info]
->
-> `ターゲット・サービスURL` に入力するURLは、店舗情報をGET要求で取得するAPIです。ブラウザーの別のタブを開き、`ターゲット・サービスURL`に入力したURLをコピー&ペーストして、APIのレスポンスが返ることを確認してください。
+	> ![][info]
+	>
+	> `ターゲット・サービスURL` に入力するURLは、店舗情報をGET要求で取得するAPIです。ブラウザーの別のタブを開き、`ターゲット・サービスURL`に入力したURLをコピー&ペーストして、APIのレスポンスが返ることを確認してください。
 
 
 1.	まずは、単純にプロキシーするAPIを作成するため、`クライアント IDを使用した保護`のチェックをはずし、「次へ」をクリックします。
@@ -97,23 +107,15 @@
 
 	![](/lab-guide/img/lab1/create-api-from-target-service-wizard3.png)
 
-1.	APIの設定の確認・編集を行います。初期画面の`APIのセットアップ`メニューで一番下までスクロールし、`ゲートウェイ・タイプ`に`DataPower API Gateway`が選択されていることを確認します。
-	![](/lab-guide/img/lab1/create-api-from-target-service-wizard3.png)
-
-> ![][info]
->
-> API Connect v2018では2種類のゲートウェイ・タイプが利用できます。API Connect v5ベースのランタイム・アーキテクチャーの`DataPower Gateway (v5 互換)`と、新しい`DataPower API Gateway`です。新しい`DataPower API Gateway`では、API処理に特化しており、ランタイムのパフォーマンスが向上しています。それぞれのゲートウェイ・タイプで一部利用できないポリシーがあるため注意してください。詳細は以下のリンクで確認できます。
-> + [マニュアル : API Connect のゲートウェイ・タイプ](https://www.ibm.com/support/knowledgecenter/ja/SSMNED_2018/com.ibm.apic.overview.doc/rapic_gateway_types.html) : https://www.ibm.com/support/knowledgecenter/ja/SSMNED_2018/com.ibm.apic.overview.doc/rapic_gateway_types.html
-> + [APIGW Porting Notes](https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes) : https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes
-
-
 1.	API設計のメニューから`プロパティー`を開くと、`target-url`というプロパティーが自動定義されています。`target-url`をクリックすると、デフォルト値に、API作成時のウィザードで入力したターゲット・サービスURLがセットされています。
 
-	![](/lab-guide/img/lab1/create-api-from-target-service-wizard3.png)
+	![](/lab-guide/img/lab1/property.png)
 
-> ![][info]
->
-> プロパティーは、デプロイしたカタログに応じてAPIのパラメーターを変えたい場合に便利です。プロパティーを利用すれば、デプロイするカタログを変える際に、API定義を修正する必要がありません。ここでは、API Gatewayから呼び出すURLをカタログごとに変えることができるように、プロパティーが設定されています。
+	![](/lab-guide/img/lab1/property-target-url.png)
+
+	> ![][info]
+	>
+	> プロパティーは、デプロイしたカタログに応じてAPIのパラメーターを変えたい場合に便利です。プロパティーを利用すれば、デプロイするカタログを変える際に、API定義を修正する必要がありません。ここでは、API Gatewayから呼び出すURLをカタログごとに変えることができるように、プロパティーが設定されています。
 
 	ここまででシンプルなAPIのインターフェース定義が完了しました。
 
@@ -122,7 +124,7 @@
 
 1.	アセンブルでは、受け付けたAPI要求に対する処理内容を定義します。API開発画面上部から`アセンブル`をクリックして、アセンブル画面に移動します。
 
-	![](/lab-guide/img/lab1/create-api-from-target-service-wizard3.png)
+	![](/lab-guide/img/lab1/move-to-assemble.png)
 
 1.	アセンブル画面が表示されます。アセンブルでは、受け付けたAPI要求に対する処理内容を定義します。
 
