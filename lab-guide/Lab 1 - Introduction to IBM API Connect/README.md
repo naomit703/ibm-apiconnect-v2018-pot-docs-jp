@@ -7,24 +7,22 @@
 
 1.	API Managerにアクセスしてログインします。
 
-   ユーザー・レジストリーの選択画面が表示された場合には、`API Manager User Registry`を選択し、`ユーザー名`、`パスワード`を入力して`サインイン`をクリックしてAPI Managerにログインします。
+		ユーザー・レジストリーの選択画面が表示された場合には、`API Manager User Registry`を選択し、`ユーザー名`、`パスワード`を入力して`サインイン`をクリックしてAPI Managerにログインします。
 
 
-   |項目|入力値|備考
-   |-----------------|-----------|-----------|
-   |ユーザー名|apic.user*xxx*|*xxx*は受講生ごとに割り振られた数字に置き換えてください。|
-   |パスワード|Passw0rd!| |
+		|項目|入力値|備考
+		|-----------------|-----------|-----------|
+		|ユーザー名|apic.user*xxx*|*xxx* は受講生ごとに割り振られた数字に置き換えてください。|
+		|パスワード|Passw0rd!| |
 
-![](/lab-guide/img/lab1/apimanager-login-1.png)
+		![](/lab-guide/img/lab1/apimanager-login-1.png)
 
-![](/lab-guide/img/lab1/apimanager-login-2.png)
+		![](/lab-guide/img/lab1/apimanager-login-2.png)
 
-    ![](../img/lab1/apimanager-login-1.png)
-    ![](../img/lab1/apimanager-login-2.png)
+1.	`APIおよび製品の開発`をクリックします。
 
-![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/blob/master/lab-guide/img/lab1/apimanager-login-1.png)
-
-    ![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/blob/master/lab-guide/img/lab1/apimanager-login-2.png)
+		![](/lab-guide/img/lab1/develop-api-product-menu.png)
+develop-api-product-menu
 
 1.	From the terminal command line type:
 
