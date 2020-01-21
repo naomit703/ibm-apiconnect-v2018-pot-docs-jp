@@ -26,6 +26,8 @@
 
 	![](/lab-guide/img/lab1/apimanager-login-1.png)
 
+	![](/lab-guide/img/lab1/apimanager-login-2.png)
+
 
 	> ![][info]
 	>
@@ -53,6 +55,7 @@
 
 	![](/lab-guide/img/lab1/catalog-select-gw-service.png)
 
+1.	左上の![](/lab-guide/img/lab1/return-button.png)をクリックして戻ります。
 
 
 	> ![][info]
