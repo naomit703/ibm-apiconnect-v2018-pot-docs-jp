@@ -146,7 +146,7 @@
 
 # 1.4	- APIのテスト
 
-1.	作成したAPIのテストを行います。アセンブル画面で利用できるAPIのテストツールを利用します。画面上のボタン![](/lab-guide/img/common/start-test-tool-button.png)をクリックしてテストツールを表示します。
+1.	作成したAPIのテストを行います。アセンブル画面で利用できるAPIのテストツールを利用します。画面上のボタン![](/lab-guide/img/common/start-test-button.png)をクリックしてテストツールを表示します。
 
 	![](/lab-guide/img/lab1/start-test-tool.png)
 
