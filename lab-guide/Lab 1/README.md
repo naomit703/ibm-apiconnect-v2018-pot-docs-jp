@@ -24,7 +24,7 @@
 	|ユーザー名|apic.user*xxx*|
 	|パスワード|Passw0rd!|
 
-	![](/lab-guide/img/lab1/apimanager-login-1.png)
+	![](/lab-guide/img/common/apimanager-login-1.png)
 
 	![](/lab-guide/img/lab1/apimanager-login-2.png)
 
