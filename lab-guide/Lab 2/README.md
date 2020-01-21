@@ -109,7 +109,7 @@
 
 	![](/lab-guide/img/lab2/test-tool-api-response2.png)
 
-1.	ここまでで、セキュリティー定義を付加したAPIAPIの定義とテストが完了しました。右上の`保存`ボタン![](/lab-guide/img/common/save-bottun.png)をクリックして、API定義を保存し、ホームメニューをクリックして、ホームに戻ります。
+1.	ここまでで、セキュリティー定義を付加したAPIの定義とテストが完了しました。右上の`保存`ボタン![](/lab-guide/img/common/save-bottun.png)をクリックして、API定義を保存し、メニューから`ホーム`を選択してホームに戻ります。
 
 	![](/lab-guide/img/lab1/move-to-home.png)
 
@@ -161,7 +161,7 @@
 	|<APIエンドポイント>/branch-key/|
 
 	今度はエラーとなるはずです。`branch-key`APIには、セキュリティー定義で`APIキー`が必要なため、`401 Unauthorized`エラーが応答として戻ります。
-	これは、Chromeブラウザで実行した応答の例です。
+	以下の画面は、Chromeブラウザで実行した応答の例です。
 
 	![](/lab-guide/img/lab2/response-401.png)
 
