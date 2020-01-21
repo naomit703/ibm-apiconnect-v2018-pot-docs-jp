@@ -94,29 +94,29 @@
 
 1.	`APIのアクティブ化`をクリックし、APIをカタログ上にデプロイします。
 
-		![](/lab-guide/img/lab2/activate-api2.png)
+	![](/lab-guide/img/lab2/activate-api2.png)
 
 1.	操作・メニューで呼び出す操作として`get /`を選択し、`呼び出し`をクリックしてAPIを呼び出します。
 
-		![](/lab-guide/img/lab2/test-tool-invoke-api2.png)
+	![](/lab-guide/img/lab2/test-tool-invoke-api2.png)
 
-		> ![][info]
-		>
-		> テストツールに、`clientID`が表示されていることに注目してください。このAPIの呼び出しにはAPIキーが必要となったため、テストツールが自動的にテスト用のAPIキーを発行し、このAPIの呼び出しができるように利用登録までが完了しています。利用登録については、後続の演習で説明があります。
+	> ![][info]
+	>
+	> テストツールに、`clientID`が表示されていることに注目してください。このAPIの呼び出しにはAPIキーが必要となったため、テストツールが自動的にテスト用のAPIキーを発行し、このAPIの呼び出しができるように利用登録までが完了しています。利用登録については、後続の演習で説明があります。
 
 
 1.	API応答が表示されます。状況コードが`200 OK`と表示されており、応答本文にJSON形式の応答が表示されていることを確認します。
 
-		![](/lab-guide/img/lab2/test-tool-api-response2.png)
+	![](/lab-guide/img/lab2/test-tool-api-response2.png)
 
 1.	ここまでで、セキュリティー定義を付加したAPIAPIの定義とテストが完了しました。右上の`保存`ボタン![](/lab-guide/img/common/save-bottun.png)をクリックして、API定義を保存し、ホームメニューをクリックして、ホームに戻ります。
 
-		![](/lab-guide/img/lab1/move-to-home.png)
+	![](/lab-guide/img/lab1/move-to-home.png)
 
 
 # 2.3	- APIの外部ツールからのテスト
 
-1.	演習1、演習2で作成したAPIが、どのようなURLで公開されるのか、確認します。公開されるAPIのエンドポイントは、ゲートウェイ、プロバイダー組織、カタログによって決められます。エンドポイントのURLはカタログの設定で確認できます。API Managerの左のメニューから`管理`を選択します。
+1.	演習1、演習2で作成したAPIが、どのようなURLで公開されるのかを確認します。公開されるAPIのエンドポイントは、ゲートウェイ、プロバイダー組織、カタログによって決められます。エンドポイントのURLはカタログの設定で確認できます。API Managerの左のメニューから`管理`を選択します。
 
 	![](/lab-guide/img/common/move-from-home-to-manage.png)
 
