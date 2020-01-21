@@ -75,7 +75,7 @@
 
 1.	API Managerの左のメニューから`開発`に移動します。
 
-	![](/lab-guide/img/common/left-menu-develop.png)
+	![](/lab-guide/img/lab1/left-menu-develop.png)
 
 1.	`開発`画面で、`追加`メニューから`API`を選択します。
 
@@ -84,6 +84,7 @@
 1.	`ターゲット・サービスから`を選択し、`次へ`をクリックします。
 
 	![](/lab-guide/img/lab1/addapi-from-target-service.png)
+	![](/lab-guide/img/lab1/addapi-from-target-service-next.png)
 
 1.	作成するAPIの情報を以下のように入力し、`次へ`をクリックします。
 
