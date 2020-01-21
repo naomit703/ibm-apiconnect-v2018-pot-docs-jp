@@ -2,7 +2,7 @@
 
 この演習では、既存のAPIを呼び出すAPIをAPI Connectに登録してテストを行います。
 
-# 演習 2 - 目的
+# 演習 1 - 目的
 
 この演習では、以下の内容を理解できます。
 
@@ -55,14 +55,14 @@
 
 	![](/lab-guide/img/lab1/catalog-select-gw-service.png)
 
-1.	左上の![](/lab-guide/img/lab1/return-button.png)をクリックして戻ります。
+1.	左上の![](/lab-guide/img/common/return-button.png)をクリックして戻ります。
 
 
 	> ![][info]
 	>
 	> API Connect v2018では2種類のゲートウェイ・タイプが利用できます。API Connect v5ベースのランタイム・アーキテクチャーの`DataPower Gateway (v5 互換)`と、新しい`DataPower API Gateway`です。新しい`DataPower API Gateway`では、API処理に特化しており、ランタイムのパフォーマンスが向上しています。それぞれのゲートウェイ・タイプで一部利用できないポリシーがあるため注意してください。詳細は以下のリンクで確認できます。
-	> + [マニュアル : API Connect のゲートウェイ・タイプ](https://www.ibm.com/support/knowledgecenter/ja/SSMNED_2018/com.ibm.apic.overview.doc/rapic_gateway_types.html) : https://www.ibm.com/support/knowledgecenter/ja/SSMNED_2018/com.ibm.apic.overview.doc/rapic_gateway_types.html
-	> + [APIGW Porting Notes](https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes) : https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes
+	> + マニュアル : API Connect のゲートウェイ・タイプ : [](https://www.ibm.com/support/knowledgecenter/ja/SSMNED_2018/com.ibm.apic.overview.doc/rapic_gateway_types.html) : https://www.ibm.com/support/knowledgecenter/ja/SSMNED_2018/com.ibm.apic.overview.doc/rapic_gateway_types.html
+	> + APIGW Porting Notes : [](https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes) : https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes
 
 
 	> ![][info]
@@ -91,8 +91,8 @@
 	|項目|入力値|備考|
 	|-----------------|-----------|-----------------|
 	|タイトル|branch|APIの名前|
-	|バージョン|branch|デフォルトで`1.0.0`が入力されます|
-	|基本パス|branch|デフォルトでAPIのタイトルと同じ名前が入力されます|
+	|バージョン|1.0.0|デフォルトで`1.0.0`が入力されます|
+	|基本パス|/branch|デフォルトでAPIのタイトルと同じ名前が入力されます|
 	|ターゲット・サービスURL|https://apictutorials.mybluemix.net/branches |このAPIが呼び出すターゲットサービスを入力します|
 
 	![](/lab-guide/img/lab1/create-api-from-target-service-wizard1.png)
@@ -136,10 +136,10 @@
 
 	左側の`パレット`には、アセンブルで利用することができるコンポーネントが表示されています。コンポーネントを左側のパレットから真ん中の`キャンバス`上の`アセンブリー・フロー`上にドラッグ&ドロップして、処理を組み立てることができます。
 
-	`アセンブリー・フロー`では、受け付けたAPI要求に対する処理内容を定義します。API Connectは、API呼び出しが行われると、まずセキュリティーが適用され、次にレート制限が適用された上で、`アセンブリー・フロー`に定義された内容に基づいて処理が行い、API要求元に対して応答を行います。
+	`アセンブリー・フロー`では、受け付けたAPI要求に対する処理内容を定義します。API Connectは、API呼び出しが行われると、まずセキュリティーが適用され、次にレート制限が適用された上で、`アセンブリー・フロー`に定義された内容に基づいて処理を行い、API要求元に対して応答を行います。
 
 	`アセンブリー・フロー`上に配置されている`ポリシー`をクリックすると、右側にその`ポリシー`の`プロパティー・シート`が表示されます。`プロパティー・シート`にポリシー内での処理を設定します。
-	アセンブリー・フローには、`invoke`ポリシーがすでに配置されいます。`invoke`ポリシーは外部のサービスを呼び出すポリシーです。`invoke`ポリシーをクリックすると、右側に`プロパティー・シート`開きます。`invoke`ポリシーの`URL`には、プロパティーで定義している`${target-url}`が入力されています。プロパティーで定義した値は、`${}`を利用して指定します。
+	アセンブリー・フローには、`invoke`ポリシーがすでに配置されいます。`invoke`ポリシーは外部のサービスを呼び出すポリシーです。`invoke`ポリシーをクリックすると、右側に`プロパティー・シート`開きます。`invoke`ポリシーの`URL`には、プロパティーで定義している`${target-url}`が入力されています。プロパティーで定義した値は、`${}`の形式で指定します。
 
 	![](/lab-guide/img/lab1/assemble-invoke-policy-property1.png)
 
@@ -173,6 +173,8 @@
 	![](/lab-guide/img/lab1/move-to-home.png)
 
 	以上で、演習1は終了です。
+
+---
 
 続いて、 [演習 2 - APIへの定義の追加](../Lab%202)に進んでください。
 
