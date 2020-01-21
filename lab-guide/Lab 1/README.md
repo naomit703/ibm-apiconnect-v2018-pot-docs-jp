@@ -65,7 +65,7 @@
 	> + APIGW Porting Notes : [](https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes) : https://github.com/ibm-apiconnect/apigw/wiki/APIGW-Porting-Notes
 
 
-	> ![][info]
+	> ![][important]
 	>
 	> この作業は、新しいカタログを利用する場合に、最初に必要になります。Sandboxカタログはデフォルトのカタログです。カタログとは、APIのデプロイ先となるゲートウェイ上の環境の単位です。APIを公開する際に、公開先のカタログを指定します。APIを公開するとAPIのエンドポイントにカタログ名が含まれます。
 
