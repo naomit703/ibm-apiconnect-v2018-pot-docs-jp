@@ -40,12 +40,12 @@
 	|基本パス|/branch-key|デフォルトでAPIのタイトルと同じ名前が入力されます|
 	|ターゲット・サービスURL|https://apictutorials.mybluemix.net/branches |このAPIが呼び出すターゲットサービスを入力します|
 
-		![](/lab-guide/img/lab1/create-api-from-target-service-wizard1.png)
+	![](/lab-guide/img/lab1/create-api-from-target-service-wizard1.png)
 
 
-		> ![][info]
-		>
-		> `ターゲット・サービスURL` に入力するURLは、店舗情報をGET要求で取得するAPIです。ブラウザーの別のタブを開き、`ターゲット・サービスURL`に入力したURLをコピー&ペーストして、APIのレスポンスが返ることを確認してください。
+	> ![][info]
+	>
+	> `ターゲット・サービスURL` に入力するURLは、店舗情報をGET要求で取得するAPIです。ブラウザーの別のタブを開き、`ターゲット・サービスURL`に入力したURLをコピー&ペーストして、APIのレスポンスが返ることを確認してください。
 
 1.	`キー単位でAPI呼び出しを制限する`にチェックを入れ、`5 / 1 分`の設定に変更して`次へ`をクリックします。
 
