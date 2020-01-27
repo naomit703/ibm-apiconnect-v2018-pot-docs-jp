@@ -169,7 +169,7 @@
 
 ---
 
-続いて、 [演習 3 - スクラッチからのAPIの作成](../Lab%203)に進んでください。
+続いて、 [演習 3 - インポートによるAPIの作成](../Lab%203)に進んでください。
 
 [important]: /lab-guide/img/common/important.png "Important!"
 [info]: /lab-guide/img/common/info.png "Information"

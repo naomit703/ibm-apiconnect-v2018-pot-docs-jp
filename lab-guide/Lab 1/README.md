@@ -176,7 +176,7 @@
 
 ---
 
-続いて、 [演習 2 - APIへの定義の追加](../Lab%202)に進んでください。
+続いて、 [演習 2 - セキュリティー定義の付加されたAPIの作成](../Lab%202)に進んでください。
 
 [important]: /lab-guide/img/common/important.png "Important!"
 [info]: /lab-guide/img/common/info.png "Information"
