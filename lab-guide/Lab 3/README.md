@@ -112,6 +112,10 @@
 1.	`製品を再公開`し、呼び出す操作を選択して、`呼び出し`をクリックしてAPIをテストしてみましょう。応答が正しく返ることを確認してください。
 ![](/lab-guide/img/lab3/api-test-response.png)
 
+1.	右上の`保存`ボタン![](/lab-guide/img/common/save-bottun.png)をクリックして、API定義を保存し、ホームメニューをクリックして、ホームに戻ります。
+
+	![](/lab-guide/img/lab1/move-to-home3.png)
+
 
 
 [important]: https://github.com/ibm-apiconnect/pot-onprem-docs/raw/5010/lab-guide/img/common/important.png "Important!"

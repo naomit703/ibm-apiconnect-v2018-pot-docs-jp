@@ -40,7 +40,7 @@
 	|基本パス|/branch-key|デフォルトでAPIのタイトルと同じ名前が入力されます|
 	|ターゲット・サービスURL|https://apictutorials.mybluemix.net/branches |このAPIが呼び出すターゲットサービスを入力します|
 
-	![](/lab-guide/img/lab1/create-api-from-target-service-wizard1.png)
+	![](/lab-guide/img/lab2/create-api-from-target-service2-wizard1.png)
 
 
 	> ![][info]
@@ -134,15 +134,15 @@
 
 	> ![][info]
 	>
-	> `APIエンドポイント`のルールは以下のようになります。
-	> <ゲートウェイのURL>/<プロバイダー組織の名前>/<カタログの名前>
+	> カタログごとの`APIエンドポイント`のルールは以下のようになります。
+	> <ゲートウェイのエンドポイント>/<プロバイダー組織の名前>/<カタログの名前>
 
 
 1. まず、演習1で作成した、`branch`APIをテストしてみましょう。APIのURLは以下の形式となります。
 
 	|APIのURL|
 	|-----------------|
-	|<ゲートウェイのURL>/<プロバイダー組織の名前>/<カタログの名前>/<APIの基本パス>/<呼び出すパス>|
+	|<カタログごとのAPIエンドポイント>/<APIの基本パス>/<呼び出すパス>|
 
 	演習1で作成した`branch`APIは、基本パスが`/branch`、パスは`/`となっています。したがって、前の手順でコピーしたAPIエンドポイントの後ろに、`/branch/`を追加したものが、`branch`APIのURLとなります。
 
@@ -150,7 +150,7 @@
 
 	|`branch`APIのURL|
 	|-----------------|
-	|<APIエンドポイント>/branch/|
+	|<カタログごとのAPIエンドポイント>/branch/|
 
 	`branch`APIはセキュリティー定義を付加していないため、呼び出しが成功するはずです。
 
@@ -158,12 +158,14 @@
 
 	|`branch-key`APIのURL|
 	|-----------------|
-	|<APIエンドポイント>/branch-key/|
+	|<カタログごとのAPIエンドポイント>/branch-key/|
 
 	今度はエラーとなるはずです。`branch-key`APIには、セキュリティー定義で`APIキー`が必要なため、`401 Unauthorized`エラーが応答として戻ります。
 	以下の画面は、Chromeブラウザで実行した応答の例です。
 
 	![](/lab-guide/img/lab2/response-401.png)
+
+
 
 以上で、演習2は終了です。
 
