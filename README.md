@@ -1,2 +1,3 @@
 # pot-onprem-docs
-Proof of Technology Student Lab Guide and Instructor Information
+
+IBM API Connect v2018ハンズオン手順
