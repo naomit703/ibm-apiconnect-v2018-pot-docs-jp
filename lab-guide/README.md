@@ -31,6 +31,6 @@
 
 続いて、 [演習 1 - シンプルなAPIの作成](./Lab%201)に進んでください。
 
-[important]: /lab-guide/img/common/important.png "Important!"
-[info]: /lab-guide/img/common/info.png "Information"
-[troubleshooting]: /lab-guide/img/common/troubleshooting.png "Troubleshooting"
+[important]: https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/raw/master/lab-guide/img/common/important.png "Important!"
+[info]: https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/raw/master/lab-guide/img/common/info.png "Information"
+[troubleshooting]: https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/raw/master/lab-guide/img/common/troubleshooting.png "Troubleshooting"
