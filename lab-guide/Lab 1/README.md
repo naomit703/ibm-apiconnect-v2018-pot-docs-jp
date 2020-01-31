@@ -19,19 +19,13 @@
 
 	ユーザー・レジストリーの選択画面が表示された場合には、`API Manager User Registry`を選択し、`ユーザー名`、`パスワード`を入力して`サインイン`をクリックしてAPI Managerにログインします。
 
-	|項目|入力値|
-	|-----------------|-----------|
-	|ユーザー名|apic.user*xxx*|
-	|パスワード|Passw0rd!|
-
 	![](/lab-guide/img/common/apimanager-login-1.png)
 
 	![](/lab-guide/img/common/apimanager-login-2.png)
 
-
 	> ![][info]
 	>
-	> ユーザー名の*xxx*の部分には、受講生ごとに割り当てられた数字に置き換えてください。今後、API Managerにログインする場合には、この手順でログインしてください。
+	> 今後、API Managerにログインする場合には、この手順でログインしてください。
 
 
 1.	カタログのゲートウェイ設定を確認して設定します。API Managerのトップページで`カタログの管理`をクリックします。
