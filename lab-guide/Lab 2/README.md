@@ -43,7 +43,7 @@ body_class: markdown-body
 	|タイトル|branch-key|APIの名前|
 	|バージョン|1.0.0|デフォルトで`1.0.0`が入力されます|
 	|基本パス|/branch-key|デフォルトでAPIのタイトルと同じ名前が入力されます|
-	|ターゲット・サービスURL|[https://apictutorials.mybluemix.net/branches](https://apictutorials.mybluemix.net/branches) |このAPIが呼び出すターゲットサービスを入力します|
+	|ターゲット・サービスURL|https://apictutorials.mybluemix.net/branches|このAPIが呼び出すターゲットサービスを入力します|
 
 	![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/raw/master/lab-guide/img/lab2/create-api-from-target-service2-wizard1.png)
 

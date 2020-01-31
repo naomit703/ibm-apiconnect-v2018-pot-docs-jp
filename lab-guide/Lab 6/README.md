@@ -149,12 +149,12 @@ body_class: markdown-body
 
 1.	以下のように入力し、`保存`をクリックします。
 
-	|項目|入力値|備考|
-	|---|---|---|
-	|名前|oauth||
-	|タイプ|OAuth2||
-	|OAuth プロバイダー|oauthprovider||
-	|フロー|Resource Owner||
+	|項目|入力値|
+	|---|---|
+	|名前|oauth|
+	|タイプ|OAuth2|
+	|OAuth プロバイダー|oauthprovider|
+	|フロー|Resource Owner|
 
 	![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/raw/master/lab-guide/img/lab6/api-security-def-oauth-detail.png)
 

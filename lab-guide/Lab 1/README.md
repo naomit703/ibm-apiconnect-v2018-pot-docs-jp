@@ -88,11 +88,11 @@ body_class: markdown-body
 1.	作成するAPIの情報を以下のように入力し、`次へ`をクリックします。
 
 	|項目|入力値|備考|
-	|---|---|---|
+	|------|------|----|
 	|タイトル|branch|APIの名前|
 	|バージョン|1.0.0|デフォルトで`1.0.0`が入力されます|
 	|基本パス|/branch|デフォルトでAPIのタイトルと同じ名前が入力されます|
-	|ターゲット・サービスURL|https://apictutorials.mybluemix.net/branches |このAPIが呼び出すターゲットサービスを入力します|
+	|ターゲット・サービスURL|https://apictutorials.mybluemix.net/branches|このAPIが呼び出すターゲットサービスを入力します|
 
 	![](https://github.com/naomit703/ibm-apiconnect-v2018-pot-docs-jp/raw/master/lab-guide/img/lab1/create-api-from-target-service-wizard1.png)
 
