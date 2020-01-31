@@ -41,7 +41,9 @@
 
 	![](/lab-guide/img/lab1/catalog-select-setting-menu.png)
 
-1.	`ゲートウェイ・サービス`メニューを開き、`編集`をクリックします。
+1.	`ゲートウェイ・サービス`メニューを開きます。ゲートウェイ・サービスが登録されていることを確認してください。登録されていない場合は、後続の手順で登録します。登録されている場合は、`1.2 - APIの作成`に進んでください。
+
+	`編集`をクリックします。
 
 	![](/lab-guide/img/lab1/catalog-gw-service-edit.png)
 
@@ -161,6 +163,14 @@
 1.	API応答が表示されます。状況コードが`200 OK`と表示されており、応答本文にJSON形式の応答が表示されていることを確認します。
 
 	![](/lab-guide/img/lab1/test-tool-api-response.png)
+
+	> ![][info]
+	>
+	> 以下のようなエラーが表示された場合には、一度表示されているリンクをクリックして別のタブで開き、証明書の例外を受け入れてください。その後、テストの画面に戻り再度、`呼び出し`ボタンをクリックしてテストを実行してみてください。
+	
+	![](/lab-guide/img/lab1/api-test-certifiate-error.png)
+
+	![](/lab-guide/img/lab1/browser-certificate-accept.png)
 
 1.	ここまでで、既存のAPIをパススルーで呼び出すシンプルなAPIの定義とテストが完了しました。右上の`保存`ボタン![](/lab-guide/img/common/save-bottun.png)をクリックして、API定義を保存し、ホームメニューをクリックして、ホームに戻ります。
 
